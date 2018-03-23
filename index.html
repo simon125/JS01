@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript">
 
-        var dzisiaj = new Date()
+        function odliczanie(){
+            var dzisiaj = new Date()
 
-        var dzien = dzisiaj.getDate()
-        var miesiac = dzisiaj.getMonth() + 1
-        var rok = dzisiaj.getFullYear()
-        
-        var godzina = dzisiaj.getHours()
-        var minuta = dzisiaj.getMinutes()
-        var sekunda = dzisiaj.getSeconds()
+            var dzien = dzisiaj.getDate()
+            var miesiac = dzisiaj.getMonth() + 1
+            var rok = dzisiaj.getFullYear()
+
+            var godzina = dzisiaj.getHours()
+            var minuta = dzisiaj.getMinutes()
+            var sekunda = dzisiaj.getSeconds()
+
+            document.getElementById("zegar").innerHTML = dzien + "." + miesiac + "." + rok + " | " + godzina + ":" + minuta + ":" + sekunda
+            
+            setTimeout("odliczanie()", 1000)
+        }
+
+
 
 
     </script>
@@ -25,6 +34,8 @@
     <div id="zegar"></div>
 
 
-    <script type="text/javascript"></script>
+    <script >
+        odliczanie()
+    </script>
 </body>
 </html>
